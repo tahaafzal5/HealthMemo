@@ -8,7 +8,7 @@ target 'Health Memo' do
   # Pods for Health Memo
 pod 'Parse'
 pod 'AlamofireImage'
-pod ‘googleapis’
+pod 'googleapis', :path => '.'
   target 'Health MemoTests' do
     inherit! :search_paths
     # Pods for testing
