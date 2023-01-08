@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+import Speech
 
 class Memo_detailedViewController: UIViewController {
 
@@ -22,7 +24,53 @@ class Memo_detailedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+	
+	func speak() {
+		let text = "Hi Taha! Can you please rate how you are feeling from 1 to 10?"
+		let synthesizer = AVSpeechSynthesizer()
+		let utterance = AVSpeechUtterance(string: text)
+		utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+		synthesizer.speak(utterance)
+		
+		let recognizer = SFSpeechRecognizer()
+		
+		speak2()
+	}
+	
+	func speak2() {
+		let text = "Hmm, what symptoms are you experiencing?"
+		let synthesizer = AVSpeechSynthesizer()
+		let utterance = AVSpeechUtterance(string: text)
+		utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+		synthesizer.speak(utterance)
+		
+		let recognizer = SFSpeechRecognizer()
+		
+		speak3()
+	}
+	
+	func speak3() {
+		let text = "OK. I understand that. Did you feel your body temperature today was higher than it usualy is?"
+		let synthesizer = AVSpeechSynthesizer()
+		let utterance = AVSpeechUtterance(string: text)
+		utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+		synthesizer.speak(utterance)
+		
+		let recognizer = SFSpeechRecognizer()
+		
+		speak4()
+	}
+	
+	func speak4() {
+		let text = "I have saved this as a memo for you."
+		let synthesizer = AVSpeechSynthesizer()
+		let utterance = AVSpeechUtterance(string: text)
+		utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+		synthesizer.speak(utterance)
+		
+		let recognizer = SFSpeechRecognizer()
+	}
+	
 
     /*
     // MARK: - Navigation

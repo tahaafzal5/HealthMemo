@@ -12,8 +12,6 @@ import googleapis
 
 class MemosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-
-
     @IBOutlet weak var tableView: UITableView!
     
     var memos = [PFObject] ()
@@ -70,5 +68,17 @@ class MemosViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Pass the selected object to the new view controller.
     }
     */
-
+	
+	enum ParsingError: Error {
+	  case topLevelSchemaUnknownType(schemaName: String, type: String)
+	  case topLevelSchemaArrayDoesNotContainObjects(schemaName: String)
+	  case arrayDidNotIncludeItems(schemaName: String?)
+	  case arrayHadUnknownItems(schemaName: String)
+	  case schemaDidNotIncludeTypeOrRef(schemaName: String)
+	  case arrayContainedArray(schemaName: String)
+	  case unknown
+	}
+	
+	let driveScope = "https://www.googleapis.com/auth/drive.readonly"
+	
 }
