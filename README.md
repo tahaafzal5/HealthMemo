@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-Hacking Health Tech – All Sci, No Fi inspired us to answer questions in health care that millions face around the world. We chose the theme "Develop Wearable Technology"
+We were inspired us to answer questions in health care that millions face around the world.
 
 Health Memo answers the following questions:
 - How should a health ecosystem be built? One that healthcare professionals and hospitals can leverage to enable better treatment and care of patients.
